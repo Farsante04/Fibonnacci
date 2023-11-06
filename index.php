@@ -8,9 +8,21 @@
 <body>
     
 
-<php
+<?php
 
-echo "Olá Mundo";
+function fibonacci($n) {
+    if ($n == 0 || $n == 1) {
+        return $n;
+    } else {
+        return (fibonacci($n - 1) + fibonacci($n - 2));
+    }
+}
+
+$meses = 13; // 13 meses contando com o momento de adesão dos coelhos
+echo "Pares de coelhos ao longo de 1 ano: ";
+for ($i = 0; $i < $meses; $i++) {
+    echo fibonacci($i) . " ";
+}
 
 ?>
 
